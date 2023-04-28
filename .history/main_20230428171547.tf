@@ -15,10 +15,3 @@ terraform {
 provider "azurerm" {
   features {}
 }
-resource "azurerm_resource_group" "rg" {
-  name     = "blank"
-  location = var.location-rg
-  tags = {
-    "Application" = "DemoApp"
-  }
-}

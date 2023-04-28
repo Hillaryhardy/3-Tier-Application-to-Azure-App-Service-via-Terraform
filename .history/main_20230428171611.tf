@@ -16,7 +16,7 @@ provider "azurerm" {
   features {}
 }
 resource "azurerm_resource_group" "rg" {
-  name     = "blank"
+  name     = "Fitnessgeek-rg"
   location = var.location-rg
   tags = {
     "Application" = "DemoApp"
