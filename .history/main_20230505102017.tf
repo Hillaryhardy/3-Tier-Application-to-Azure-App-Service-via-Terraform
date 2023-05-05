@@ -16,7 +16,7 @@ provider "azurerm" {
   features {}
 }
 resource "azurerm_resource_group" "rg" {
-  name     = "3-tier-system"
+  name     = "blank"
   location = var.location-rg
   tags = {
     "Application" = "DemoApp"
