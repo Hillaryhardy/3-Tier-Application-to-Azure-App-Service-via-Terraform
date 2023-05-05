@@ -44,3 +44,26 @@ resource "azurerm_mssql_virtual_network_rule" "allow-be" {
   ]
 }
 
+resource "azurerm_mssql_database" "fg-database" {
+  name           = "fg-db"
+  server_id      = azurerm_mssql_server.azuresql.id
+  collation      = "SQL_Latin1_General_CP1_CI_AS"
+  max_size_gb    = 2
+  read_scale     = false
+  sku_name       = "S0"
+  zone_redundant = false
+
+  tags = {
+    Application = "3-tier-system"
+    Env = "Prod"
+  }
+}
+
+resource "azurerm_key_vault_secret" "sqldb_cnxn" {
+  name = "fgsqldbconstring"
+  value = "Driver={ODBC Driver 18 for SQL Server};Server=tcp:fg-sqldb-prod.database.windows.net,1433;Database=fg-db;Uid=4adminu$er;Pwd=${random_password.randompassword.result};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  key_vault_id = azurerm_key_vault.fg-keyvault.id
+  depends_on = [
+    azurerm_mssql_database.fg-database,azurerm_key_vault_access_policy.kv_access_policy_01,azurerm_key_vault_access_policy.kv_access_policy_02,azurerm_key_vault_access_policy.kv_access_policy_03
+  ]
+}
