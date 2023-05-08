@@ -1,0 +1,3 @@
+resource "azurerm_" "name" {
+  
+}
