@@ -1,0 +1,1 @@
+resource "azurerm_storage_account" "fitnessgeek-storage" {
