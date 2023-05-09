@@ -7,11 +7,11 @@
  trigger :
  - main 
 
- variables:
- - name: 'serviceconnection'
-   value: '3-tier-system-sc'
+ variables :
+  - name: 'serviceconnection'
+   value: 'fitnessgeek-sc'
 
- - name: 'environment'
+  - name: 'environment'
    value: 'dev'
 
  - name: 'backend_rg'

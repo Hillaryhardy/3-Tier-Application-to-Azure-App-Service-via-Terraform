@@ -9,7 +9,7 @@
 
  variables:
  - name: 'serviceconnection'
-   value: '3-tier-system-sc'
+   value: '3-tier-sc'
 
  - name: 'environment'
    value: 'dev'

@@ -9,7 +9,7 @@
 
  variables:
  - name: 'serviceconnection'
-   value: '3-tier-system-sc'
+   value: 'fitnes-scsgeek'
 
  - name: 'environment'
    value: 'dev'

@@ -26,5 +26,5 @@
  - name: 'backendkey_tfstate'
    value: 'terraform.tfstate'
 
- - name: 'working_directory'
+ - name: 'working_directory
    value: '$(System.DefaultWorkingDirectory)'

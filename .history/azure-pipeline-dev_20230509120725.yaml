@@ -7,17 +7,17 @@
  trigger :
  - main 
 
- variables:
- - name: 'serviceconnection'
-   value: '3-tier-system-sc'
+ variables :
+  - name: 'serviceconnection'
+   value: 'fitnessgeek-sc'
 
- - name: 'environment'
+  - name: 'environment'
    value: 'dev'
 
- - name: 'backend_rg'
+  - name: 'backend_rg'
    value: 'terraform-backend'
 
- - name: 'backend_storageaccount'
+  - name: 'backend_storageaccount'
    value: 'terraformbackend2023'
 
  - name: 'backend_container'
