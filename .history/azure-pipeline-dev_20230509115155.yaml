@@ -6,7 +6,4 @@
 
  trigger :
  - main 
-
- variables :
-  - name:  'serviceconnection'
-    value : 
+ 

@@ -5,8 +5,4 @@
 # https://aka.ms/yaml
 
  trigger :
- - main 
-
- variables :
-  - name:  'serviceconnection'
-    value : 
+ 

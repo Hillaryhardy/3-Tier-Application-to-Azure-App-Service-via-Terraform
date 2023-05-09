@@ -5,8 +5,18 @@
 # https://aka.ms/yaml
 
  trigger :
- - main 
-
- variables :
-  - name:  'serviceconnection'
-    value : 
+ - ### YamlMime:LearningPath
+ uid: 
+ title: 
+ summary: 
+ roles:
+   - 
+ products:
+   - 
+ modules:
+   - 
+ levels:
+   - 
+ iconUrl: 
+ achievement: 
+ 
