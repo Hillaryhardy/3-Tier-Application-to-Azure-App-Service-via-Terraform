@@ -1,13 +1,13 @@
 # Starter pipeline
 # Start with a minimal pipeline that you can customize to build and deploy your code.
-# We will use checkov for static code analysis
+#We will use checkov for static code analysis
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+ trigger :
+ - main 
 
-variables:
+ variables:
  - name: 'serviceconnection'
    value: '3-tier-system-sc'
 
@@ -31,7 +31,7 @@ variables:
 
 
 
-pool:
+   pool:
   vmImage: ubuntu-latest
 
 stages :
@@ -219,3 +219,15 @@ stages :
             commandOptions: '-input=false -auto-approve -var-file="config.tfvars"'
             environmentServiceNameAzureRM: '$(serviceconnection)'
             workingDirectory: '$(working_directory)'
+
+            
+  
+            
+
+
+
+           
+
+    
+              
+    

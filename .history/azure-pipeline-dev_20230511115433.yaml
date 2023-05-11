@@ -1,6 +1,34 @@
+Skip to content
+Product
+Solutions
+Open Source
+Pricing
+Search
+Sign in
+Sign up
+fitnessgeek-gh
+/
+SimpleApp_Terraform
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+SimpleApp_Terraform/azure-pipeline-dev.yaml
+@RamakantDadhichi
+RamakantDadhichi CI Added and adding pr validation
+Latest commit 33cf076 on Feb 23
+ History
+ 1 contributor
+234 lines (202 sloc)  7.44 KB
+ 
+
 # Starter pipeline
 # Start with a minimal pipeline that you can customize to build and deploy your code.
-# We will use checkov for static code analysis
+#We will use checkov for static code analysis
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
@@ -9,7 +37,7 @@ trigger:
 
 variables:
  - name: 'serviceconnection'
-   value: '3-tier-system-sc'
+   value: 'fitnessgeek-sc'
 
  - name: 'environment'
    value: 'dev'
@@ -219,3 +247,30 @@ stages :
             commandOptions: '-input=false -auto-approve -var-file="config.tfvars"'
             environmentServiceNameAzureRM: '$(serviceconnection)'
             workingDirectory: '$(working_directory)'
+
+            
+  
+            
+
+
+
+           
+
+    
+              
+    
+    
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

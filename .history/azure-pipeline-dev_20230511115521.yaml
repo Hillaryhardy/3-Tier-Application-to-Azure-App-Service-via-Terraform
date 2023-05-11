@@ -9,7 +9,7 @@ trigger:
 
 variables:
  - name: 'serviceconnection'
-   value: '3-tier-system-sc'
+   value: 'fitnessgeek-sc'
 
  - name: 'environment'
    value: 'dev'

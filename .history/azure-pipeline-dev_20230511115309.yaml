@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+#We will use checkov for static code analysis
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+ trigger :
+ - main 
+
+ variables:
+ - name: 'serviceconnection'
+   value: '3-tier-system-sc'
+
+ - name: 'environment'
+   value: 'dev'
+
+ - name: 'backend_rg'
+   value: 'terraform-backend'
+
+ - name: 'backend_storageaccount'
+   value: 'terraformbackend2023'
+
+ - name: 'backend_container'
+   value: 'terraform'
+
+ - name: 'backendkey_tfstate'
+   value: 'terraform.tfstate'
+
+ - name: 'working_directory'
+   value: '$(System.DefaultWorkingDirectory)'
